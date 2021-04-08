@@ -1,0 +1,21 @@
+<div class="container p-4">
+    <div class="row">
+        {{#each appointments}}
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <a href="">
+                            <h3 class="card-title text-uppercase">
+                                {{appointment}}
+                            </h3>
+                        </a>
+                        <p>Estado: {{done}}</p>
+                        <p>Feedback: {{feedback}}</p>
+                        <a href="" class="btn btn-danger">Cancelar</a>
+                        <a href="" class="btn btn-secondary">Cambiar</a>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>
