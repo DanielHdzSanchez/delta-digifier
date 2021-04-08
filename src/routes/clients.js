@@ -8,7 +8,7 @@ router.get('/new', function (req, res) {
 })
 
 router.post('/new', async (req, res) => {
-    const {title, service1, service2} = req.body
+    const {title} = req.body
     const newAppointment = {
         clients_id: 1,
         services_id: 1,
