@@ -4,16 +4,21 @@
             <div class="col-md-3">
                 <div class="card text-center">
                     <div class="card-body">
-                        <a href="">
-                            <h3 class="card-title text-uppercase">
-                                {{appointment}}
-                            </h3>
-                        </a>
+                        <h3 class="card-title text-uppercase">
+                            {{appointment}}
+                        </h3>
+                        <h2>{{timeago appointment}}</h2>
                         <p>Estado: {{done}}</p>
                         <p>Feedback: {{feedback}}</p>
                         <a href="" class="btn btn-danger">Cancelar</a>
                         <a href="" class="btn btn-secondary">Cambiar</a>
                     </div>
+                </div>
+            </div>
+        {{else}}
+            <div class="col-md4 mx-auto">
+                <div class="card card-body text-center">
+                    <p>No appointments yet</p>
                 </div>
             </div>
         {{/each}}
