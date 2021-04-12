@@ -30,12 +30,14 @@ app.use((req, res, next) => {
 //routes
 app.use(require('./routes'))
 app.use(require('./routes/auth'))
+app.use('/' , require('./routes/index'))
+app.use('/services' , require('./routes/services'))
 app.use('/links', require('./routes/links'))
 app.use('/clients', require('./routes/clients'))
 app.use('/collabs', require('./routes/collabs'))
 
 //public
-app.use(express.static(path.join(__dirname, 'public')))
+//app.use(express.static(path.join(__dirname, 'public')))
 
 //starting the server
 app.listen(app.get('port'), () => {
